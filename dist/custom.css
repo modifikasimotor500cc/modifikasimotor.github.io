@@ -1,0 +1,112 @@
+p {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    text-align: justify;
+}
+
+strong {
+    color: #ff6543;
+}
+
+.main-bg:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/assets/main-bg.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: inherit;
+} 
+
+.bg-bulan:before{
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    opacity: 0.4;
+    height: 100%;
+    background-image: url(/assets/bulan.webp);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100% auto;
+    z-index: -1;
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(0, 0) rotate(0);
+    }
+    50% {
+        transform: translate(3px, 5px) rotate(2deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0);
+        }
+}
+  
+
+
+  .image-floating {
+    animation: floating 5s ease-in-out infinite;
+  }
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+  
+.gradient-button {
+    background: linear-gradient(45deg, darkblue, red, yellow, pink,darkblue);
+    background-size: 200% 200%;
+    animation: gradient-animation 4s linear infinite;
+    cursor: pointer;
+}
+
+.gradient-button:hover {
+    background:none;
+}
+
+.login-button:hover{
+    background: linear-gradient(45deg, darkblue,red, yellow, pink,darkblue);
+    background-size: 200% 200%;
+    animation: gradient-animation 4s linear infinite;
+}
+
+@media (min-width: 640px) { 
+
+}
+
+@media (min-width: 768px) { 
+    .main-bg::before{
+        background-position: top;
+        background-size: 100% auto;
+    }    
+}
+
+@media (min-width: 1024px) { }
+
+@media (min-width: 1280px) { }
+
+@media (min-width: 1536px) { }
+
+@media (max-width: 640px) {
+    #hero {
+      flex-direction: column;
+    }
+  }
